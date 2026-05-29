@@ -7,6 +7,8 @@ Este projeto foi desenvolvido em COBOL com o objetivo de calcular o salário fin
 
 O programa recebe os dados do funcionário, calcula o bônus conforme o tempo trabalhado e exibe o salário base, o valor do bônus e o salário final.
 
+Este projeto **não utiliza Free Format**.
+
 ## Autor
 
 Vitor leite
