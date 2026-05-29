@@ -24,18 +24,18 @@
       *
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
-           PERFORM MENUSAL UNTIL NOT OPCAO = 1.
+           PERFORM MENUSAL UNTIL OPCAO IS NOT EQUAL TO 1.
            STOP RUN.
        MENUSAL.
            DISPLAY " ".
            DISPLAY "Deseja calcular o salario final?".
-           DISPLAY "Escreve o numero da opção que deseja".
+           DISPLAY "Escreve o numero da opcao que deseja".
            DISPLAY "1 - SIM".
-           DISPLAY "2 - NÃO".
+           DISPLAY "2 - NAO".
            DISPLAY "Qual quer numero que nao 1 sera considerado o nao".
            ACCEPT OPCAO
       *
-           IF OPCAO = 2
+           IF OPCAO IS EQUAL TO 2
                DISPLAY "Obrigario por usar o sistema".
            IF OPCAO = 1
                PERFORM ENTRADA-DADOS
@@ -46,13 +46,15 @@
        ENTRADA-DADOS.
             DISPLAY "Digite o seu nome".
             ACCEPT NOME.
+      *
             DISPLAY "Digite seu salario sem utilizar a virgula".
             DISPLAY "Você deve escrever seu salario no formato XXXXXYY "
-      -     "inves de XXXXXX,YY".
+      -      "inves de XXXXXX,YY".
             ACCEPT SALARIO-SEM-DECIMAL.
             COMPUTE SALARIO = SALARIO-SEM-DECIMAL / 100.
+      *
             DISPLAY "Digite a quantidade de anos que voce esta na "
-      -     "empresa".
+      -      "empresa".
             ACCEPT TEMPO-DE-EMPRESA.
       *
        CALCULA-BONUS.
